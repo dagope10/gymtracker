@@ -1,4 +1,3 @@
-// 5. JwtFilter
 package com.app.gymtracker.security;
 
 import jakarta.servlet.FilterChain;
@@ -10,12 +9,11 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
-import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
-@Component
+// Removido el @Component porque ahora lo creamos como Bean en JwtFilterConfig
 public class JwtFilter extends OncePerRequestFilter {
 
     private final JwtUtil jwtUtil;
