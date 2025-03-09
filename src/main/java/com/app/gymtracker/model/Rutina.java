@@ -17,11 +17,13 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Data
 @JsonIgnoreProperties("usuario")
 @NoArgsConstructor
+@EqualsAndHashCode(exclude = "dias")
 @AllArgsConstructor
 @Entity
 @Table(name = "rutinas")
